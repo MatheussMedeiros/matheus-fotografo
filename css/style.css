@@ -104,6 +104,8 @@ footer .footer-sociais a {
   font-size: 8rem;
   text-transform: uppercase;
   letter-spacing: 1.5rem;
+  opacity: 0;
+  animation: fade-down 0.5s 0.6s forwards;
 }
 .banner .banner-profissao h3::before {
   content: "";
@@ -114,9 +116,15 @@ footer .footer-sociais a {
   margin: 0 10px;
   transform: translate(0, -5px);
 }
+.banner .banner-profissao h3 {
+  opacity: 0;
+  animation: fade-left 0.5s 0.8s forwards;
+}
 .banner .banner-info {
   display: flex;
   width: 350px;
+  opacity: 0;
+  animation: fade-left 0.5s 0.8s forwards;
 }
 .banner .banner-info .line {
   background-color: #D2B15B;
@@ -132,10 +140,11 @@ footer .footer-sociais a {
   margin-bottom: 100px;
 }
 .banner img {
+  opacity: 0;
+  animation: fade-right-img 0.5s 1s forwards;
   position: absolute;
   left: 100%;
   bottom: -100%;
-  transform: translate(-594px, -614px);
 }
 
 /* frase */
@@ -180,6 +189,7 @@ footer .footer-sociais a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
 }
 .galeria .destaque {
   grid-row: span 2;
@@ -323,6 +333,47 @@ footer .footer-sociais a {
 }
 .sobre .sobre-img {
   height: 100vh;
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes fade-right-img {
+  0% {
+    opacity: 0;
+    transform: translate(-574px, -614px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-594px, -614px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
