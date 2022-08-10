@@ -11,6 +11,9 @@ $animation-secundary-right: fade-right .5s 1s forwards
     font-family: $font-padrao
     box-sizing: border-box
 
+html
+    scroll-behavior: smooth    
+
 body
     background-color: #232323
     a
@@ -328,8 +331,12 @@ footer
         opacity: 1
         transform: translate(-594px, -614px)
 
+.animation
+    opacity: 0
+    transition: 1s
 
-
+.show
+    opacity: 1
 
 
 
